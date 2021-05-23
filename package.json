@@ -1,0 +1,32 @@
+{
+  "name": "Full-Stack-Dev",
+  "version": "1.0.0",
+  "description": "Challenge full stack - using node js, react js, express &amp; mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlippahOrtega/Full-Stack-Dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlippahOrtega/Full-Stack-Dev/issues"
+  },
+  "homepage": "https://github.com/FlippahOrtega/Full-Stack-Dev#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.10",
+    "nodemon": "^2.0.7"
+  }
+}
