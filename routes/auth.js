@@ -18,6 +18,7 @@ const schemaLogin = Joi.object({
 	email: Joi.string().min(6).max(255).required().email(),
 	password: Joi.string().min(6).max(1024).required(),
 });
+
 router.post('/login', async (req, res) => {
 	// validaciones
 	const { error } = schemaLogin.validate(req.body);
@@ -29,9 +30,19 @@ router.post('/login', async (req, res) => {
 	const validPassword = await bcrypt.compare(req.body.password, user.password);
 	if (!validPassword) return res.status(400).json({ error: 'Password Incorret' });
 
-	res.json({
+	const token = jwt.sign(
+		{
+			//payload
+			name: user.name,
+			id: user._id,
+		},
+		//secret
+		process.env.TOKEN_SECRET
+	);
+	res.header('auth-token', token).json({
 		error: null,
 		data: 'Welcome',
+		token,
 	});
 });
 router.post('/register', async (req, res) => {

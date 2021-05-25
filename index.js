@@ -18,8 +18,11 @@ mongoose
 
 // import routes
 const authRoutes = require('./routes/auth');
+const toDo = require('./routes/toDo');
+const verifyToken = require('./middlewares/validate-token');
 // route middlewares
 app.use('/api/user', authRoutes);
+app.use('/api/todo/', verifyToken, toDo);
 
 app.get('/', (req, res) => {
 	res.json({
