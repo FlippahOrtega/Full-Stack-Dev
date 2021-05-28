@@ -30,12 +30,11 @@ Es porque debes crear un archivo .env con las siguiente estructura.
 
 
 **.env file ./.env** 
+  
+    
     USER=flipp 
-    
     PASSWORD=Ndk3lg1xCfm7Fexr 
-    
     DBNAME=api  <-- whaterver you want
-    
     TOKEN_SECRET=pa88W03dt3u3 <-- whaterver you want, be carefull 
 
 
