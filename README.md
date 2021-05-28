@@ -28,6 +28,8 @@ Es porque debes crear un archivo .env con las siguiente estructura.
    > crear un clúster y un usuario el cual les brindara las credenciales
    > para ingresar en este archivo .env
 
+
+**.env file ./.env** 
     USER=flipp 
     
     PASSWORD=Ndk3lg1xCfm7Fexr 
